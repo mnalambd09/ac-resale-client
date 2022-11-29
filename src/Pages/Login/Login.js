@@ -24,6 +24,7 @@ const Login = () => {
                 if(user.uid){
                     alert('Login successfully')
                 }
+                form.reset();
             })
             .catch(error => console.error(error))
             
