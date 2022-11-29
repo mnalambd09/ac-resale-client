@@ -6,6 +6,7 @@ import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
 import Blog from '../Pages/Blog/Blog'
 import NotFound from '../Pages/NotFound/NotFound';
+import Category from '../Pages/Home/Categories/Category';
 
 
 export const router = createBrowserRouter([
@@ -28,6 +29,11 @@ export const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/category/:id',
+                element: <Category></Category>,
+                // loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
             },
             {
                 path: '*',
