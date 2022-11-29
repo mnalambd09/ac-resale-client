@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import img from '../../assets/images/login/login.jfif'
-import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import img from '../../assets/images/login.png'
 import { FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa';
-import useTitle from '../../hooks/useTitle';
+import {AuthContext} from '../../Context/AuthProvider'
+
 
 const Login = () => {
-    useTitle('Login');
+    // useTitle('Login');
 
     const {signIn, loginWithGoogle, logInWithGithub} = useContext(AuthContext)
 
