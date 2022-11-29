@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import img from '../../assets/images/login.png'
 import { FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa';
 import {AuthContext} from '../../Context/AuthProvider'
@@ -8,7 +8,8 @@ import {AuthContext} from '../../Context/AuthProvider'
 const Login = () => {
     // useTitle('Login');
 
-    const {signIn, loginWithGoogle, logInWithGithub} = useContext(AuthContext)
+    const {signIn, loginWithGoogle, logInWithGithub} = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleLogin = event =>{
         event.preventDefault();
@@ -25,6 +26,7 @@ const Login = () => {
                     alert('Login successfully')
                 }
                 form.reset();
+                navigate('/')
             })
             .catch(error => console.error(error))
             
