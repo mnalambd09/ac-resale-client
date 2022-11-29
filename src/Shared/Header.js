@@ -10,11 +10,15 @@ const Header = () => {
         <li><Link to='/'>Home</Link></li>
         {
             user?.uid ?
-                <button onClick={logOut}>Log Out</button>
+                <>
+                    <button  onClick={logOut}>Log Out</button>
+                    <li>{user?.email && <span>Welcome, {user.email}</span>}</li>
+                </>
                 :
                 <>
                     <li><Link to='/register'>Register</Link></li>
                     <li><Link to='/login'>Login</Link></li>
+                    
                 </>
         }
     </>
@@ -35,7 +39,7 @@ const Header = () => {
                     </div>
                     <Link to='/' className="btn btn-ghost normal-case text-xl">A/C Resale</Link>
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className="navbar-end mr-16 hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
                         {menuItems}
                     </ul>
