@@ -86,7 +86,7 @@ const Login = () => {
                             <button onClick={handlegithubLogin} className='mx-2 text-gray-500'><FaGithub /></button>
                             <button className='mx-2 text-blue-600'><FaFacebook /></button>
                         </div>
-                        <p className='text-center'>New to Genius Car <Link className='text-orange-600 font-bold' to='/signup'>Sign Up</Link></p>
+                        <p className='text-center'>New to Genius Car <Link className='text-orange-600 font-bold' to='/register'>Sign Up</Link></p>
                     </div>
                 </div>
             </div>
