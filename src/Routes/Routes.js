@@ -7,6 +7,7 @@ import Register from '../Pages/Register/Register';
 import Blog from '../Pages/Blog/Blog'
 import NotFound from '../Pages/NotFound/NotFound';
 import Category from '../Pages/Home/Categories/Category';
+import PrivateRoute from './PrivateRoute';
 
 
 export const router = createBrowserRouter([
@@ -32,7 +33,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/category/:id',
-                element: <Category></Category>,
+                element: <PrivateRoute><Category></Category></PrivateRoute>,
                 // loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
             },
             {
