@@ -12,7 +12,7 @@ const Category = () => {
     
     
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${params.id}`)
+        fetch(`https://ac-resale-server.vercel.app/product/${params.id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])
